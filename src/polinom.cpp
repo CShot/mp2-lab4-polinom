@@ -206,3 +206,22 @@ Polinom& Polinom::operator-(const Polinom &pol) const
 	}
 	return *result;
 }
+Polinom& Polinom::operator*(const Polinom &pol) const
+{
+	Polinom *result = new Polinom;
+	Polinom o(*this);
+	for (Monom *i = pol.pHead; i != NULL; i = i->GetNext())
+	{
+		for (Monom *j = o.getHead(); j != NULL; j = j->GetNext())
+		{
+			int x = 0;
+			int y = 0;
+			int z = 0;
+			x = (i->GetPower()) % 20 + (j->GetPower()) % 20;
+			y = ((i->GetPower()) / 20) % 20 + ((j->GetPower()) / 20) % 20;
+			z = (i->GetPower()) / 400 + (j->GetPower()) / 400;
+			(*result).AddElem(i->GetKoef() * j->GetKoef(), i->GetPower() + j->GetPower());
+		}
+	}
+	return *result;
+}
