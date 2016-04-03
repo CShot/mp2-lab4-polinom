@@ -1,9 +1,10 @@
 #include "monom.h"
+#include <iostream>
 
-Monom::Monom(double coef, int p, Monom *_next)
+Monom::Monom(double coef, int st, Monom *_next)
 {
 	SetKoef(coef);
-	SetPower(p);
+	SetPower(st);
 	SetNext(_next);
 }
 
@@ -38,9 +39,9 @@ void Monom::SetKoef(double coef)
 	koef = coef;
 }
 
-void Monom::SetPower(int p)
+void Monom::SetPower(int st)
 {
-	pow = p;
+	pow = st;
 }
 
 void Monom::SetNext(Monom *_next)

@@ -3,11 +3,11 @@
 
 class Monom
 {
+public:
 	int pow;
 	double koef;
 	Monom *next;
-public:
-	Monom(double coef = 0.0, int p = 0, Monom *_next = NULL);
+	Monom(double coef = 0.0, int st = 0, Monom *_next = NULL);
 	Monom(const Monom &m);
 	Monom* GetNext();
 	void SetNext(Monom *_next);
@@ -15,6 +15,6 @@ public:
 	bool operator==(const Monom &m) const;
 	void SetKoef(double coef);
 	double GetKoef();
-	void SetPower(int p);
+	void SetPower(int st);
 	int GetPower();
 };
