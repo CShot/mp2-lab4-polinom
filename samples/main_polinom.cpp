@@ -6,7 +6,7 @@ int main()
 	Polinom pol1;
 	Polinom pol2;
 	int fp,mc;
-	cout << "Введите первый полином:" <<endl;
+	cout << "Введите первый полином:" << endl;
 	cin >> pol1;
 	system("cls");
 	cout << "Первый полином:" << pol1 << endl;
@@ -19,13 +19,12 @@ int main()
 		cout << "Второй полином:" << pol2 << endl;
 		cout << "Выберете желаемую оперцию:" << endl;
 		cout << "1.Сумма" << endl;
-		cout << "2.Разница(Между первым и вторым полиномами)" << endl;
-		cout << "3.Разница(Между вторым и первым полиномами)" << endl;
-		cout << "4.Произведение" << endl;
-		cout << "5.Выход" << endl;
+		cout << "2.Разница" << endl;
+		cout << "3.Произведение" << endl;
+		cout << "4.Выход" << endl;
 		cin >> mc;
 		if (mc == 1)
-		{
+		{ 
 			cout << "Результат:" << pol1 + pol2<<endl;
 		}
 		if (mc == 2)
@@ -34,13 +33,9 @@ int main()
 		}
 		if (mc == 3)
 		{
-			cout << "Результат:" << pol2 - pol1 << endl;
-		}
-		if (mc == 4)
-		{
 			cout << "Результат:" << pol1 * pol2 << endl;
 		}
-		if (mc == 5)
+		if (mc == 4)
 		{
 			return 0;
 		}

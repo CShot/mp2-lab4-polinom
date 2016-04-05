@@ -1,0 +1,15 @@
+﻿Сборка начата 05.04.2016 21:11:06.
+     1>Проект "C:\Users\Максимка\Work\mp2-lab4-polinom\sln\vc9\sample\sample.vcxproj" в узле 2 (целевые объекты Build).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I../../../include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\samples\main_polinom.cpp
+         main_polinom.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Максимка\Work\mp2-lab4-polinom\sln\vc9\Debug\sample.exe" /INCREMENTAL /NOLOGO /LIBPATH:../Debug polinom.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Максимка\Work\mp2-lab4-polinom\sln\vc9\Debug\sample.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Максимка\Work\mp2-lab4-polinom\sln\vc9\Debug\sample.lib" /MACHINE:X86 /SAFESEH Debug\main_polinom.obj
+         "C:\Users\Максимка\Work\mp2-lab4-polinom\sln\vc9\Debug\polinom.lib"
+     1>main_polinom.obj : warning LNK4075: эх єўшЄ√трхЄё  "/EDITANDCONTINUE" шч-чр ёяхЎшЇшърЎшш "/SAFESEH"
+         sample.vcxproj -> C:\Users\Максимка\Work\mp2-lab4-polinom\sln\vc9\Debug\sample.exe
+     1>Сборка проекта "C:\Users\Максимка\Work\mp2-lab4-polinom\sln\vc9\sample\sample.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+
+Затраченное время: 00:00:06.04

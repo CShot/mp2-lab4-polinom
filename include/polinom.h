@@ -16,6 +16,7 @@ public:
 	Polinom& operator+(const Polinom &pol) const;
 	Polinom& operator-(const Polinom &pol) const;
 	Polinom& operator*(const Polinom &pol) const;
+	Polinom& operator=(const Polinom &pol);
 	friend istream& operator>>(istream &s, Polinom &pol);
 	friend ostream& operator<<(ostream &f, Polinom &pol);
 };

@@ -211,3 +211,19 @@ Polinom& Polinom::operator*(const Polinom &pol) const
 	}
 	return *result;
 }
+
+Polinom& Polinom::operator=(const Polinom &pol) 
+{
+	this->DelElem();
+	pHead = pol.pHead;
+	Monom *l1 = pol.pHead;
+	Monom *l2 = (*this).getHead();
+	l2 = l1;
+	while (l1 != NULL)
+	{
+		l2 = l1;
+		l1 = l1->GetNext();
+		l2 = l2->GetNext();
+	}
+	return *this;
+}
