@@ -3,9 +3,11 @@
 int main()
 {
 	setlocale(LC_ALL, "Russian");
+	try
+	{
 	Polinom pol1;
 	Polinom pol2;
-	int fp,mc;
+	int fp, mc;
 	cout << "Введите первый полином:" << endl;
 	cin >> pol1;
 	system("cls");
@@ -24,8 +26,8 @@ int main()
 		cout << "4.Выход" << endl;
 		cin >> mc;
 		if (mc == 1)
-		{ 
-			cout << "Результат:" << pol1 + pol2<<endl;
+		{
+			cout << "Результат:" << pol1 + pol2 << endl;
 		}
 		if (mc == 2)
 		{
@@ -44,5 +46,10 @@ int main()
 		cout << "2.Нет" << endl;
 		cin >> fp;
 	} while (fp == 1);
+    }
+	catch (const char* error)
+	{
+		cout << error << endl;
+	}
 	return 0;
 }

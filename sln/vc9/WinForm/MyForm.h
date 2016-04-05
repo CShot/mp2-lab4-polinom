@@ -396,103 +396,108 @@ namespace WinForm {
 #pragma endregion
 		Polinom *pol1;
 		Polinom *pol2;
-	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) 
+	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e)
 	{
+		/*
 		pol1 = new Polinom;
 		pol2 = new Polinom;
+		*/
 	}
 
-	private: System::Void label4_Click(System::Object^  sender, System::EventArgs^  e) 
+	private: System::Void label4_Click(System::Object^  sender, System::EventArgs^  e)
 	{
 	}
-	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e)
-	{
-		try
-		{
-			double koef = Convert::ToDouble(textBox1->Text);
-			int x = Convert::ToInt32(textBox2->Text);
-			int y = Convert::ToInt32(textBox3->Text);
-			int z = Convert::ToInt32(textBox4->Text);
-			if (x < 0 || y < 0 || z < 0)
-			{
-				throw "Отрицательная степень не допустима! ";
-			}
-			int N = x * 100 + y * 10 + z;
-			pol1->AddElem(koef, N);
-			string str;
-			stringstream c;
-			c << (*pol1);
-			getline(c, str);
-			textBox5->Text = gcnew String(str.c_str());
-		}
-		catch (const char* error)
-		{
-			textBox5->Text = "Отрицательная степень не допустима!";
-		}
-	}
+			 /*
+			 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e)
+			 {
+				 try
+				 {
+					 double koef = Convert::ToDouble(textBox1->Text);
+					 int x = Convert::ToInt32(textBox2->Text);
+					 int y = Convert::ToInt32(textBox3->Text);
+					 int z = Convert::ToInt32(textBox4->Text);
+					 if (x < 0 || y < 0 || z < 0)
+					 {
+						 throw "Отрицательная степень не допустима! ";
+					 }
+					 int N = x * 100 + y * 10 + z;
+					 pol1->AddElem(koef, N);
+					 string str;
+					 stringstream c;
+					 c << (*pol1);
+					 getline(c, str);
+					 textBox5->Text = gcnew String(str.c_str());
+				 }
+				 catch (const char* error)
+				 {
+					 textBox5->Text = "Отрицательная степень не допустима!";
+				 }
+			 }
 
-	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e)
-	{
-		textBox5->Text = "";
-		pol1 = new Polinom;
-	}
-	 private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e)
-	{
-		try
-		{
-		double koef = Convert::ToDouble(textBox10->Text);
-		int x = Convert::ToInt32(textBox9->Text);
-		int y = Convert::ToInt32(textBox8->Text);
-		int z = Convert::ToInt32(textBox7->Text);
-		if (x < 0 || y < 0 || z < 0)
-		{
-			 throw "Отрицательная степень не допустима! ";
-		}
-		int N = x * 100 + y * 10 + z;
-		pol1->AddElem(koef, N);
-		string str;
-		stringstream c;
-		c << (*pol1);
-		getline(c, str);
-		textBox6->Text = gcnew String(str.c_str());
-		}
-			catch (const char* error)
-		{
-		textBox6->Text = "Отрицательная степень не допустима!";
-		}
-	}
+			 private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e)
+			 {
+				 textBox5->Text = "";
+				 pol1 = new Polinom;
+			 }
+			  private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e)
+			 {
+				 try
+				 {
+				 double koef = Convert::ToDouble(textBox10->Text);
+				 int x = Convert::ToInt32(textBox9->Text);
+				 int y = Convert::ToInt32(textBox8->Text);
+				 int z = Convert::ToInt32(textBox7->Text);
+				 if (x < 0 || y < 0 || z < 0)
+				 {
+					  throw "Отрицательная степень не допустима! ";
+				 }
+				 int N = x * 100 + y * 10 + z;
+				 pol1->AddElem(koef, N);
+				 string str;
+				 stringstream c;
+				 c << (*pol1);
+				 getline(c, str);
+				 textBox6->Text = gcnew String(str.c_str());
+				 }
+					 catch (const char* error)
+				 {
+				 textBox6->Text = "Отрицательная степень не допустима!";
+				 }
+			 }
 
-	private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e)
-	{
-		textBox6->Text = "";
-		pol1 = new Polinom;
-	}
-	private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e)
-	{
-		Polinom res = (*pol1) + (*pol2);
-		string str;
-		stringstream c;
-		c << res;
-		getline(c, str);
-		textBox11->Text = gcnew String(str.c_str());
-	}
-	private: System::Void button6_Click(System::Object^  sender, System::EventArgs^  e)
-	{
-		Polinom res = (*pol1) - (*pol2);
-		string str;
-		stringstream c;
-		c << res;
-		getline(c, str);
-		textBox11->Text = gcnew String(str.c_str());
-	}
-	private: System::Void button7_Click(System::Object^  sender, System::EventArgs^  e)
-	{
-		Polinom res = (*pol1) * (*pol2);
-		string str;
-		stringstream c;
-		c << res;
-		getline(c, str);
-		textBox11->Text = gcnew String(str.c_str());
-	}
-};
-}
+			 private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e)
+			 {
+				 textBox6->Text = "";
+				 pol1 = new Polinom;
+			 }
+			 private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e)
+			 {
+				 Polinom res = (*pol1) + (*pol2);
+				 string str;
+				 stringstream c;
+				 c << res;
+				 getline(c, str);
+				 textBox11->Text = gcnew String(str.c_str());
+			 }
+			 private: System::Void button6_Click(System::Object^  sender, System::EventArgs^  e)
+			 {
+				 Polinom res = (*pol1) - (*pol2);
+				 string str;
+				 stringstream c;
+				 c << res;
+				 getline(c, str);
+				 textBox11->Text = gcnew String(str.c_str());
+			 }
+			 private: System::Void button7_Click(System::Object^  sender, System::EventArgs^  e)
+			 {
+				 Polinom res = (*pol1) * (*pol2);
+				 string str;
+				 stringstream c;
+				 c << res;
+				 getline(c, str);
+				 textBox11->Text = gcnew String(str.c_str());
+			 }
+			 */
+		 };
+		 }
+

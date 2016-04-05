@@ -92,6 +92,14 @@ istream &operator>>(istream &s, Polinom &pol)
 		s >> y;
 		cout << "Степень при z:";
 		s >> z;
+		if (x < 0 || y < 0 || z < 0)
+		{
+			throw "Степени отрицательны!";
+		}
+		if (x > 9 || y > 9 || z > 9)
+		{
+			throw "Степени имеют слишком большой размер!";
+		}
 		st = x * 100 + y * 10 + z;
 		pol.AddElem(kof, st);
 		cout << "Хотите добавить моном?" << endl;
@@ -206,6 +214,10 @@ Polinom& Polinom::operator*(const Polinom &pol) const
 			x = (i->GetPower()) % 10 + (j->GetPower()) % 10;
 			y = ((i->GetPower()) / 10) % 10 + ((j->GetPower()) / 10) % 10;
 			z = (i->GetPower()) / 100 + (j->GetPower()) / 100;
+			if (x > 9 || y > 9 || z > 9)
+			{
+				throw "Степени Черезчур большие!";
+			}
 			(*result).AddElem(i->GetKoef() * j->GetKoef(), i->GetPower() + j->GetPower());
 		}
 	}
@@ -226,4 +238,33 @@ Polinom& Polinom::operator=(const Polinom &pol)
 		l2 = l2->GetNext();
 	}
 	return *this;
+}
+
+bool Polinom:: operator==(const Polinom &pol) const
+{
+	Polinom *pol1 = new Polinom(pol);
+	if (pHead == NULL)
+	{
+		if (pol1->pHead == NULL) 
+			return true;
+		else 
+			return false;
+	}
+	Monom *i = pHead;
+	Monom *j = pol1->pHead;
+	int o=1;
+	while (i != NULL)
+	{
+		if ((i->GetKoef() != j->GetKoef()) || (i->GetPower() != j->GetPower()))
+		{
+			o = 1;
+			break;
+		}
+		i = i->GetNext();
+		j = j->GetNext();
+	}
+	if (o == 1) 
+		return true;
+	else 
+		return false;
 }

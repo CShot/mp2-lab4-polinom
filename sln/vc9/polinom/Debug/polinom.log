@@ -1,14 +1,2 @@
-﻿Сборка начата 05.04.2016 21:01:46.
-     1>Проект "C:\Users\Максимка\Work\mp2-lab4-polinom\sln\vc9\polinom\polinom.vcxproj" в узле 2 (целевые объекты Build).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I../../../include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\src\polinom.cpp
-         polinom.cpp
-       Lib:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\Максимка\Work\mp2-lab4-polinom\sln\vc9\Debug\polinom.lib" /NOLOGO Debug\monom.obj
-         Debug\polinom.obj
-         polinom.vcxproj -> C:\Users\Максимка\Work\mp2-lab4-polinom\sln\vc9\Debug\polinom.lib
-     1>Сборка проекта "C:\Users\Максимка\Work\mp2-lab4-polinom\sln\vc9\polinom\polinom.vcxproj" завершена (целевые объекты Build).
-
-Сборка успешно завершена.
-
-Затраченное время: 00:00:04.64
+﻿  polinom.cpp
+  polinom.vcxproj -> C:\Users\Максимка\Work\mp2-lab4-polinom\sln\vc9\Debug\polinom.lib
