@@ -5,10 +5,11 @@ int main()
 	setlocale(LC_ALL, "Russian");
 	Polinom pol1;
 	Polinom pol2;
-	int fp,ch,mc;
+	int fp,mc;
 	cout << "¬ведите первый полином:" <<endl;
 	cin >> pol1;
 	system("cls");
+	cout << "ѕервый полином:" << pol1 << endl;
 	cout << "¬ведите второй полином:" << endl;
 	cin >> pol2;
 	do

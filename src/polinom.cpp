@@ -61,26 +61,8 @@ void Polinom::AddElem(double coef, int st)
 	{
 		pHead = m;
 	}
-	/*SortElem();*/
 }
 
-/*void Polinom::SortElem()
-{
-	Monom *i = pHead;
-	Monom *j = i;
-	for (i; i != NULL; i = i->GetNext())
-	{
-		for (j; j != NULL; j = j->GetNext())
-		{
-			if (j->GetPower() >= i->GetPower())
-			{
-				swap(i->pow, j->pow);
-				swap(i->koef, j->koef);
-			}
-		}
-	}
-}
-*/
 
 void Polinom::DelElem()
 {
@@ -101,21 +83,26 @@ istream &operator>>(istream &s, Polinom &pol)
 	int fp,st;
 	do
 	{
-		cout << "Коэффициент:"<<endl;
+		cout << "Введите моном:" << endl;
+		cout << "Коэффициент:";
 		s >> kof;
-		cout << "Степени:"<<endl;
-		cout << "x=";
+		cout << "Степень при x:";
 		s >> x;
-		cout << "y=";
+		cout << "Степень при y:";
 		s >> y;
-		cout << "z=";
+		cout << "Степень при z:";
 		s >> z;
-		st = x * 400 + y * 20 + z;
+		st = x * 100 + y * 10 + z;
 		pol.AddElem(kof, st);
-		cout << "Вы хотите продолжить ?" << endl;
+		cout << "Хотите добавить моном?" << endl;
 		cout << "1.Да" << endl;
 		cout << "2.Нет" << endl;
 		s >> fp;
+		if (fp == 1)
+		{
+			system("cls");
+			cout <<"Исходый полином:"<< pol << "+" << endl;
+		}
 	} while (fp == 1);
 	return s;
 }
@@ -123,7 +110,6 @@ istream &operator>>(istream &s, Polinom &pol)
 ostream& operator<<(ostream &f, Polinom &pol)
 {
 	Polinom o(pol);
-	/*o.SortElem();*/
 	Monom *h = o.pHead;
 	if (h == NULL)
 	{
@@ -143,7 +129,7 @@ ostream& operator<<(ostream &f, Polinom &pol)
 		}
 		else
 		{
-			f <<h->GetKoef() << "*x^" << h->GetPower() / 400 << "y^" << (h->GetPower() / 20) % 20 << "z^" << h->GetPower() % 20 ;
+			f <<h->GetKoef() << "*x^" << h->GetPower() / 100 << "*y^" << (h->GetPower() / 10) % 10 << "*z^" << h->GetPower() % 10 ;
 		}
 		return f;
 	}
@@ -160,7 +146,7 @@ ostream& operator<<(ostream &f, Polinom &pol)
 		}
 		else
 		{
-			f << h->GetKoef() << "*x^" << h->GetPower() / 400 << "y^" << (h->GetPower() / 20) % 20 << "z^" << h->GetPower() % 20;
+			f << h->GetKoef() << "*x^" << h->GetPower() / 100 << "*y^" << (h->GetPower() / 10) % 10 << "*z^" << h->GetPower() % 10;
 			h = h->GetNext();
 		}
 		if (h->GetNext() != NULL)
@@ -178,7 +164,7 @@ ostream& operator<<(ostream &f, Polinom &pol)
 	}
 	else
 	{
-		f << " + " << h->GetKoef() << "*x^" << h->GetPower() / 400 << "y^" << (h->GetPower() / 20) % 20 << "z^" << h->GetPower() % 20;
+		f << " + " << h->GetKoef() << "*x^" << h->GetPower() / 100 << "*y^" << (h->GetPower() / 10) % 10 << "*z^" << h->GetPower() % 10;
 	}
 return f;
 }
@@ -217,9 +203,9 @@ Polinom& Polinom::operator*(const Polinom &pol) const
 			int x = 0;
 			int y = 0;
 			int z = 0;
-			x = (i->GetPower()) % 20 + (j->GetPower()) % 20;
-			y = ((i->GetPower()) / 20) % 20 + ((j->GetPower()) / 20) % 20;
-			z = (i->GetPower()) / 400 + (j->GetPower()) / 400;
+			x = (i->GetPower()) % 10 + (j->GetPower()) % 10;
+			y = ((i->GetPower()) / 10) % 10 + ((j->GetPower()) / 10) % 10;
+			z = (i->GetPower()) / 100 + (j->GetPower()) / 100;
 			(*result).AddElem(i->GetKoef() * j->GetKoef(), i->GetPower() + j->GetPower());
 		}
 	}
