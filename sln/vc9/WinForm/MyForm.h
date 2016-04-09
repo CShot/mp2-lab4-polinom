@@ -1,7 +1,10 @@
 #pragma once
+#include <stdio.h> 
 #include "polinom.h"
 #include <iostream>
 #include <sstream>
+
+
 using namespace std;
 
 namespace WinForm {
@@ -38,6 +41,7 @@ namespace WinForm {
 				delete components;
 			}
 		}
+	protected:
 	private: System::Windows::Forms::Label^  label1;
 	private: System::Windows::Forms::TextBox^  textBox1;
 	private: System::Windows::Forms::TextBox^  textBox2;
@@ -66,6 +70,7 @@ namespace WinForm {
 	private: System::Windows::Forms::Button^  button7;
 	private: System::Windows::Forms::Label^  label10;
 	private: System::Windows::Forms::TextBox^  textBox11;
+
 	protected:
 
 	private:
@@ -127,6 +132,7 @@ namespace WinForm {
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(21, 20);
 			this->textBox1->TabIndex = 1;
+			this->textBox1->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox1_TextChanged);
 			// 
 			// textBox2
 			// 
@@ -134,6 +140,7 @@ namespace WinForm {
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(21, 20);
 			this->textBox2->TabIndex = 2;
+			this->textBox2->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox2_TextChanged);
 			// 
 			// textBox3
 			// 
@@ -141,6 +148,7 @@ namespace WinForm {
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(21, 20);
 			this->textBox3->TabIndex = 3;
+			this->textBox3->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox3_TextChanged);
 			// 
 			// textBox4
 			// 
@@ -148,6 +156,7 @@ namespace WinForm {
 			this->textBox4->Name = L"textBox4";
 			this->textBox4->Size = System::Drawing::Size(21, 20);
 			this->textBox4->TabIndex = 4;
+			this->textBox4->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox4_TextChanged);
 			// 
 			// button1
 			// 
@@ -157,6 +166,7 @@ namespace WinForm {
 			this->button1->TabIndex = 5;
 			this->button1->Text = L"Добавить моном";
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 			// 
 			// textBox5
 			// 
@@ -164,6 +174,7 @@ namespace WinForm {
 			this->textBox5->Name = L"textBox5";
 			this->textBox5->Size = System::Drawing::Size(205, 20);
 			this->textBox5->TabIndex = 6;
+			this->textBox5->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox5_TextChanged);
 			// 
 			// button2
 			// 
@@ -173,6 +184,7 @@ namespace WinForm {
 			this->button2->TabIndex = 7;
 			this->button2->Text = L"Удалить полином";
 			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
 			// 
 			// label2
 			// 
@@ -190,6 +202,7 @@ namespace WinForm {
 			this->textBox10->Name = L"textBox10";
 			this->textBox10->Size = System::Drawing::Size(21, 20);
 			this->textBox10->TabIndex = 9;
+			this->textBox10->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox10_TextChanged);
 			// 
 			// textBox9
 			// 
@@ -197,6 +210,7 @@ namespace WinForm {
 			this->textBox9->Name = L"textBox9";
 			this->textBox9->Size = System::Drawing::Size(21, 20);
 			this->textBox9->TabIndex = 10;
+			this->textBox9->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox9_TextChanged);
 			// 
 			// textBox8
 			// 
@@ -204,6 +218,7 @@ namespace WinForm {
 			this->textBox8->Name = L"textBox8";
 			this->textBox8->Size = System::Drawing::Size(21, 20);
 			this->textBox8->TabIndex = 11;
+			this->textBox8->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox8_TextChanged);
 			// 
 			// textBox7
 			// 
@@ -211,6 +226,7 @@ namespace WinForm {
 			this->textBox7->Name = L"textBox7";
 			this->textBox7->Size = System::Drawing::Size(21, 20);
 			this->textBox7->TabIndex = 12;
+			this->textBox7->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox7_TextChanged);
 			// 
 			// button4
 			// 
@@ -220,13 +236,15 @@ namespace WinForm {
 			this->button4->TabIndex = 13;
 			this->button4->Text = L"Добавить моном";
 			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &MyForm::button4_Click);
 			// 
 			// textBox6
 			// 
-			this->textBox6->Location = System::Drawing::Point(363, 140);
+			this->textBox6->Location = System::Drawing::Point(363, 135);
 			this->textBox6->Name = L"textBox6";
 			this->textBox6->Size = System::Drawing::Size(205, 20);
 			this->textBox6->TabIndex = 14;
+			this->textBox6->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox6_TextChanged);
 			// 
 			// button3
 			// 
@@ -236,6 +254,7 @@ namespace WinForm {
 			this->button3->TabIndex = 15;
 			this->button3->Text = L"Удалить полином";
 			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &MyForm::button3_Click);
 			// 
 			// label3
 			// 
@@ -256,7 +275,6 @@ namespace WinForm {
 			this->label4->Size = System::Drawing::Size(21, 18);
 			this->label4->TabIndex = 17;
 			this->label4->Text = L"*y";
-			this->label4->Click += gcnew System::EventHandler(this, &MyForm::label4_Click);
 			// 
 			// label5
 			// 
@@ -316,6 +334,7 @@ namespace WinForm {
 			this->button5->TabIndex = 23;
 			this->button5->Text = L"+";
 			this->button5->UseVisualStyleBackColor = true;
+			this->button5->Click += gcnew System::EventHandler(this, &MyForm::button5_Click);
 			// 
 			// button6
 			// 
@@ -325,6 +344,7 @@ namespace WinForm {
 			this->button6->TabIndex = 24;
 			this->button6->Text = L"-";
 			this->button6->UseVisualStyleBackColor = true;
+			this->button6->Click += gcnew System::EventHandler(this, &MyForm::button6_Click);
 			// 
 			// button7
 			// 
@@ -334,6 +354,7 @@ namespace WinForm {
 			this->button7->TabIndex = 25;
 			this->button7->Text = L"*";
 			this->button7->UseVisualStyleBackColor = true;
+			this->button7->Click += gcnew System::EventHandler(this, &MyForm::button7_Click);
 			// 
 			// label10
 			// 
@@ -351,6 +372,7 @@ namespace WinForm {
 			this->textBox11->Name = L"textBox11";
 			this->textBox11->Size = System::Drawing::Size(345, 20);
 			this->textBox11->TabIndex = 27;
+			this->textBox11->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox11_TextChanged);
 			// 
 			// MyForm
 			// 
@@ -398,21 +420,21 @@ namespace WinForm {
 		Polinom *pol2;
 	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e)
 	{
-		/*
+		
 		pol1 = new Polinom;
 		pol2 = new Polinom;
-		*/
+		
 	}
 
 	private: System::Void label4_Click(System::Object^  sender, System::EventArgs^  e)
 	{
 	}
-			 /*
+			
 			 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e)
 			 {
 				 try
 				 {
-					 double koef = Convert::ToDouble(textBox1->Text);
+					 double kof = Convert::ToDouble(textBox1->Text);
 					 int x = Convert::ToInt32(textBox2->Text);
 					 int y = Convert::ToInt32(textBox3->Text);
 					 int z = Convert::ToInt32(textBox4->Text);
@@ -420,17 +442,21 @@ namespace WinForm {
 					 {
 						 throw "Отрицательная степень не допустима! ";
 					 }
+					 if (x > 9 || y > 9 || z > 9)
+					 {
+						 throw "Слишком большая степень не допустима! ";
+					 }
 					 int N = x * 100 + y * 10 + z;
-					 pol1->AddElem(koef, N);
+					 pol1->AddElem (kof, N);
 					 string str;
-					 stringstream c;
-					 c << (*pol1);
-					 getline(c, str);
+					 stringstream s;
+					 s << (*pol1);
+					 getline(s, str);
 					 textBox5->Text = gcnew String(str.c_str());
 				 }
 				 catch (const char* error)
 				 {
-					 textBox5->Text = "Отрицательная степень не допустима!";
+					 textBox5->Text = "Некоректная степень не допустима!";
 				 }
 			 }
 
@@ -451,17 +477,21 @@ namespace WinForm {
 				 {
 					  throw "Отрицательная степень не допустима! ";
 				 }
+				 if (x > 9 || y > 9 || z > 9)
+				 {
+					 throw "Слишком большая степень не допустима! ";
+				 }
 				 int N = x * 100 + y * 10 + z;
-				 pol1->AddElem(koef, N);
+				 pol2->AddElem(koef, N);
 				 string str;
 				 stringstream c;
-				 c << (*pol1);
+				 c << (*pol2);
 				 getline(c, str);
 				 textBox6->Text = gcnew String(str.c_str());
 				 }
-					 catch (const char* error)
+				 catch (const char* error)
 				 {
-				 textBox6->Text = "Отрицательная степень не допустима!";
+				 textBox6->Text = "Некоректная степень не допустима!";
 				 }
 			 }
 
@@ -488,16 +518,36 @@ namespace WinForm {
 				 getline(c, str);
 				 textBox11->Text = gcnew String(str.c_str());
 			 }
-			 private: System::Void button7_Click(System::Object^  sender, System::EventArgs^  e)
-			 {
-				 Polinom res = (*pol1) * (*pol2);
-				 string str;
-				 stringstream c;
-				 c << res;
-				 getline(c, str);
-				 textBox11->Text = gcnew String(str.c_str());
-			 }
-			 */
+	private: System::Void button7_Click(System::Object^  sender, System::EventArgs^  e)
+	{
+		try
+		{
+			Polinom res = (*pol1) * (*pol2);
+			string str;
+			stringstream c;
+			c << res;
+			getline(c, str);
+			textBox11->Text = gcnew String(str.c_str());
+
+		}
+		catch (const char* error)
+		{
+			textBox11->Text = "Некоректная степень не допустима!";
+		}
+	}
+    private: System::Void textBox1_TextChanged(System::Object^  sender, System::EventArgs^  e){}
+	private: System::Void textBox2_TextChanged(System::Object^  sender, System::EventArgs^  e){}
+	private: System::Void textBox3_TextChanged(System::Object^  sender, System::EventArgs^  e){}
+	private: System::Void textBox4_TextChanged(System::Object^  sender, System::EventArgs^  e){}
+	private: System::Void textBox5_TextChanged(System::Object^  sender, System::EventArgs^  e){}
+	private: System::Void textBox6_TextChanged(System::Object^  sender, System::EventArgs^  e){}
+	private: System::Void textBox7_TextChanged(System::Object^  sender, System::EventArgs^  e){}
+	private: System::Void textBox8_TextChanged(System::Object^  sender, System::EventArgs^  e){}
+	private: System::Void textBox9_TextChanged(System::Object^  sender, System::EventArgs^  e){}
+    private: System::Void textBox10_TextChanged(System::Object^  sender, System::EventArgs^  e){}
+	private: System::Void textBox11_TextChanged(System::Object^  sender, System::EventArgs^  e){}
+	
+			
 		 };
 		 }
 
