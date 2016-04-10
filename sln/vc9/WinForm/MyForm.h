@@ -3,7 +3,7 @@
 #include "polinom.h"
 #include <iostream>
 #include <sstream>
-
+#include <gtest.h>
 
 using namespace std;
 
@@ -70,6 +70,7 @@ namespace WinForm {
 	private: System::Windows::Forms::Button^  button7;
 	private: System::Windows::Forms::Label^  label10;
 	private: System::Windows::Forms::TextBox^  textBox11;
+	private: System::Windows::Forms::Button^  button8;
 
 	protected:
 
@@ -114,6 +115,7 @@ namespace WinForm {
 			this->button7 = (gcnew System::Windows::Forms::Button());
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->textBox11 = (gcnew System::Windows::Forms::TextBox());
+			this->button8 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// label1
@@ -328,7 +330,7 @@ namespace WinForm {
 			// 
 			// button5
 			// 
-			this->button5->Location = System::Drawing::Point(180, 225);
+			this->button5->Location = System::Drawing::Point(159, 225);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(75, 23);
 			this->button5->TabIndex = 23;
@@ -348,7 +350,7 @@ namespace WinForm {
 			// 
 			// button7
 			// 
-			this->button7->Location = System::Drawing::Point(342, 225);
+			this->button7->Location = System::Drawing::Point(363, 225);
 			this->button7->Name = L"button7";
 			this->button7->Size = System::Drawing::Size(75, 23);
 			this->button7->TabIndex = 25;
@@ -368,17 +370,28 @@ namespace WinForm {
 			// 
 			// textBox11
 			// 
-			this->textBox11->Location = System::Drawing::Point(117, 282);
+			this->textBox11->Location = System::Drawing::Point(159, 282);
 			this->textBox11->Name = L"textBox11";
-			this->textBox11->Size = System::Drawing::Size(345, 20);
+			this->textBox11->Size = System::Drawing::Size(279, 20);
 			this->textBox11->TabIndex = 27;
 			this->textBox11->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox11_TextChanged);
+			// 
+			// button8
+			// 
+			this->button8->Location = System::Drawing::Point(473, 225);
+			this->button8->Name = L"button8";
+			this->button8->Size = System::Drawing::Size(75, 23);
+			this->button8->TabIndex = 28;
+			this->button8->Text = L"Тесты";
+			this->button8->UseVisualStyleBackColor = true;
+			this->button8->Click += gcnew System::EventHandler(this, &MyForm::button8_Click);
 			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(592, 320);
+			this->Controls->Add(this->button8);
 			this->Controls->Add(this->textBox11);
 			this->Controls->Add(this->label10);
 			this->Controls->Add(this->button7);
@@ -535,6 +548,15 @@ namespace WinForm {
 			textBox11->Text = "Некоректная степень не допустима!";
 		}
 	}
+	private: System::Void button8_Click(System::Object^  sender, System::EventArgs^  e)
+	{
+		int argc;
+		char **argv;
+	    ::testing::InitGoogleTest(&argc, argv);
+	    cout<<RUN_ALL_TESTS();
+		
+	}
+
     private: System::Void textBox1_TextChanged(System::Object^  sender, System::EventArgs^  e){}
 	private: System::Void textBox2_TextChanged(System::Object^  sender, System::EventArgs^  e){}
 	private: System::Void textBox3_TextChanged(System::Object^  sender, System::EventArgs^  e){}

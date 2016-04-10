@@ -52,7 +52,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Максимка\Work\mp2-lab4-polinom\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../../gtest;../../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -92,8 +92,14 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\gtest\gtest.vcxproj">
+      <Project>{60932afc-7808-48b7-b3bf-f2bc151c0065}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\polinom\polinom.vcxproj">
       <Project>{62061a03-752e-4892-ac65-4b7732128666}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\tests\tests.vcxproj">
+      <Project>{c650c93e-f0a7-4235-9f5f-0dce78609bfb}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

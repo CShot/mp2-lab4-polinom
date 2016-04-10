@@ -228,14 +228,14 @@ Polinom& Polinom::operator=(const Polinom &pol)
 {
 	this->DelElem();
 	pHead = pol.pHead;
-	Monom *l1 = pol.pHead;
-	Monom *l2 = (*this).getHead();
-	l2 = l1;
-	while (l1 != NULL)
+	Monom *p1 = pol.pHead;
+	Monom *p2 = (*this).getHead();
+	p2 = p1;
+	while (p1 != NULL)
 	{
-		l2 = l1;
-		l1 = l1->GetNext();
-		l2 = l2->GetNext();
+		p2 = p1;
+		p1 = p1->GetNext();
+		p2 = p2->GetNext();
 	}
 	return *this;
 }
@@ -252,12 +252,12 @@ bool Polinom:: operator==(const Polinom &pol) const
 	}
 	Monom *i = pHead;
 	Monom *j = pol1->pHead;
-	int o=1;
+	int o(1);
 	while (i != NULL)
 	{
 		if ((i->GetKoef() != j->GetKoef()) || (i->GetPower() != j->GetPower()))
 		{
-			o = 1;
+			o = 0;
 			break;
 		}
 		i = i->GetNext();
