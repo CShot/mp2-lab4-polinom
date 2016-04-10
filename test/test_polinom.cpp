@@ -108,6 +108,7 @@ TEST(Polinomu, Multiplication_very_big_power)
 	ASSERT_ANY_THROW(pol1*pol2);
 }
 
+ 
 
 /*cout << pol1 << endl;
 cout << pol2 << endl;

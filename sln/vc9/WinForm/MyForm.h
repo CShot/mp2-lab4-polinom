@@ -4,7 +4,7 @@
 #include <iostream>
 #include <sstream>
 #include <gtest.h>
-
+#include <windows.system.h> 
 using namespace std;
 
 namespace WinForm {
@@ -71,6 +71,8 @@ namespace WinForm {
 	private: System::Windows::Forms::Label^  label10;
 	private: System::Windows::Forms::TextBox^  textBox11;
 	private: System::Windows::Forms::Button^  button8;
+	private: System::Windows::Forms::Button^  button9;
+	private: System::Windows::Forms::Button^  button10;
 
 	protected:
 
@@ -116,6 +118,8 @@ namespace WinForm {
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->textBox11 = (gcnew System::Windows::Forms::TextBox());
 			this->button8 = (gcnew System::Windows::Forms::Button());
+			this->button9 = (gcnew System::Windows::Forms::Button());
+			this->button10 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// label1
@@ -322,7 +326,7 @@ namespace WinForm {
 			// 
 			this->label9->AutoSize = true;
 			this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F));
-			this->label9->Location = System::Drawing::Point(256, 198);
+			this->label9->Location = System::Drawing::Point(260, 198);
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(76, 18);
 			this->label9->TabIndex = 22;
@@ -330,7 +334,7 @@ namespace WinForm {
 			// 
 			// button5
 			// 
-			this->button5->Location = System::Drawing::Point(159, 225);
+			this->button5->Location = System::Drawing::Point(159, 219);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(75, 23);
 			this->button5->TabIndex = 23;
@@ -340,7 +344,7 @@ namespace WinForm {
 			// 
 			// button6
 			// 
-			this->button6->Location = System::Drawing::Point(261, 225);
+			this->button6->Location = System::Drawing::Point(261, 219);
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(75, 23);
 			this->button6->TabIndex = 24;
@@ -350,7 +354,7 @@ namespace WinForm {
 			// 
 			// button7
 			// 
-			this->button7->Location = System::Drawing::Point(363, 225);
+			this->button7->Location = System::Drawing::Point(363, 221);
 			this->button7->Name = L"button7";
 			this->button7->Size = System::Drawing::Size(75, 23);
 			this->button7->TabIndex = 25;
@@ -378,7 +382,7 @@ namespace WinForm {
 			// 
 			// button8
 			// 
-			this->button8->Location = System::Drawing::Point(473, 225);
+			this->button8->Location = System::Drawing::Point(473, 221);
 			this->button8->Name = L"button8";
 			this->button8->Size = System::Drawing::Size(75, 23);
 			this->button8->TabIndex = 28;
@@ -386,11 +390,33 @@ namespace WinForm {
 			this->button8->UseVisualStyleBackColor = true;
 			this->button8->Click += gcnew System::EventHandler(this, &MyForm::button8_Click);
 			// 
+			// button9
+			// 
+			this->button9->Location = System::Drawing::Point(473, 250);
+			this->button9->Name = L"button9";
+			this->button9->Size = System::Drawing::Size(75, 23);
+			this->button9->TabIndex = 29;
+			this->button9->Text = L"Отчет";
+			this->button9->UseVisualStyleBackColor = true;
+			this->button9->Click += gcnew System::EventHandler(this, &MyForm::button9_Click);
+			// 
+			// button10
+			// 
+			this->button10->Location = System::Drawing::Point(473, 279);
+			this->button10->Name = L"button10";
+			this->button10->Size = System::Drawing::Size(75, 23);
+			this->button10->TabIndex = 30;
+			this->button10->Text = L"Консоль";
+			this->button10->UseVisualStyleBackColor = true;
+			this->button10->Click += gcnew System::EventHandler(this, &MyForm::button10_Click);
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(592, 320);
+			this->Controls->Add(this->button10);
+			this->Controls->Add(this->button9);
 			this->Controls->Add(this->button8);
 			this->Controls->Add(this->textBox11);
 			this->Controls->Add(this->label10);
@@ -550,13 +576,35 @@ namespace WinForm {
 	}
 	private: System::Void button8_Click(System::Object^  sender, System::EventArgs^  e)
 	{
-		int argc;
-		char **argv;
-	    ::testing::InitGoogleTest(&argc, argv);
-	    cout<<RUN_ALL_TESTS();
 		
-	}
+		system("test.bat");
+		/*
+		STARTUPINFO si;
+		PROCESS_INFORMATION pi;
+		ZeroMemory(&si, sizeof(si));
+		si.cb = sizeof(si);
+		ZeroMemory(&pi, sizeof(pi));
+		char text[] = "test.bat";
+		wchar_t wtext[100];
+		mbstowcs(wtext, text, strlen(text) + 1);
+		LPWSTR name = wtext;
+		if (!CreateProcess(NULL, name, NULL, NULL, FALSE, 0, NULL, NULL, &si, &pi))
+		{
 
+		}
+		WaitForSingleObject(pi.hProcess, INFINITE);
+		CloseHandle(pi.hProcess);
+		CloseHandle(pi.hThread);
+	*/
+	}
+    private: System::Void button9_Click(System::Object^  sender, System::EventArgs^  e)
+	{
+		system("Otchet.docx");
+	}
+	private: System::Void button10_Click(System::Object^  sender, System::EventArgs^  e)
+	{
+		system("sample.exe");
+	}
     private: System::Void textBox1_TextChanged(System::Object^  sender, System::EventArgs^  e){}
 	private: System::Void textBox2_TextChanged(System::Object^  sender, System::EventArgs^  e){}
 	private: System::Void textBox3_TextChanged(System::Object^  sender, System::EventArgs^  e){}
