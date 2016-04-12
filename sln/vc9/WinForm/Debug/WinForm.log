@@ -1,4 +1,4 @@
-﻿Сборка начата 12.04.2016 15:28:18.
+﻿Сборка начата 12.04.2016 20:38:58.
      1>Проект "C:\Users\Максимка\Work\mp2-lab4-polinom\sln\vc9\WinForm\WinForm.vcxproj" в узле 2 (целевые объекты Build).
      1>Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Максимка\Work\mp2-lab4-polinom\sln\vc9\Debug\WinForm.exe" /INCREMENTAL /NOLOGO Shell32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /ASSEMBLYRESOURCE:Debug\WinForm.MyForm.resources /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Максимка\Work\mp2-lab4-polinom\sln\vc9\Debug\WinForm.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"Main" /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\MyForm.obj
@@ -12,4 +12,4 @@
 
 Сборка успешно завершена.
 
-Затраченное время: 00:00:04.50
+Затраченное время: 00:00:06.00

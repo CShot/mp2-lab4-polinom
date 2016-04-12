@@ -216,7 +216,7 @@ Polinom& Polinom::operator*(const Polinom &pol) const
 			z = (i->GetPower()) / 100 + (j->GetPower()) / 100;
 			if (x > 9 || y > 9 || z > 9)
 			{
-				throw "Степени Черезчур большие!";
+				throw "Степени слишком большие!";
 			}
 			(*result).AddElem(i->GetKoef() * j->GetKoef(), i->GetPower() + j->GetPower());
 		}
@@ -228,14 +228,14 @@ Polinom& Polinom::operator=(const Polinom &pol)
 {
 	this->DelElem();
 	pHead = pol.pHead;
-	Monom *p1 = pol.pHead;
-	Monom *p2 = (*this).getHead();
-	p2 = p1;
-	while (p1 != NULL)
+	Monom *pol1 = pol.pHead;
+	Monom *pol2 = (*this).getHead();
+	pol2 = pol1;
+	while (pol1 != NULL)
 	{
-		p2 = p1;
-		p1 = p1->GetNext();
-		p2 = p2->GetNext();
+		pol2 = pol1;
+		pol1 = pol1->GetNext();
+		pol2 = pol2->GetNext();
 	}
 	return *this;
 }

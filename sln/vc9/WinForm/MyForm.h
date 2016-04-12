@@ -576,12 +576,11 @@ namespace WinForm {
 	}
 	private: System::Void button8_Click(System::Object^  sender, System::EventArgs^  e)
 	{
-		/*
+		
 		system("test.bat");
-		*/
-		STARTUPINFO si;
+			/*STARTUPINFO si;
 		PROCESS_INFORMATION pi;
-		ZeroMemory(&si, sizeof(si));
+		ZeroMemory(&si, siz eof(si));
 		si.cb = sizeof(si);
 		ZeroMemory(&pi, sizeof(pi));
 		char text[] = "test.bat";
@@ -595,7 +594,8 @@ namespace WinForm {
 		WaitForSingleObject(pi.hProcess, INFINITE);
 		CloseHandle(pi.hProcess);
 		CloseHandle(pi.hThread);
-		
+		*/
+
 	}
 	private: System::Void button9_Click(System::Object^  sender, System::EventArgs^  e)
 	{
