@@ -83,14 +83,14 @@ istream &operator>>(istream &s, Polinom &pol)
 	int fp,st;
 	do
 	{
-		cout << "Введите моном:" << endl;
-		cout << "Коэффициент:";
+		/*cout << "Введите моном:" << endl;
+		cout << "Коэффициент:";*/
 		s >> kof;
-		cout << "Степень при x:";
+		/*cout << "Степень при x:"; */
 		s >> x;
-		cout << "Степень при y:";
+		/*cout << "Степень при y:"; */
 		s >> y;
-		cout << "Степень при z:";
+		/*cout << "Степень при z:"; */
 		s >> z;
 		if (x < 0 || y < 0 || z < 0)
 		{

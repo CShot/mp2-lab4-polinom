@@ -1,2 +1,2 @@
-tests.exe
-Pause
+tests.lnk
+PAUSE

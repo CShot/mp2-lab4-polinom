@@ -1,20 +1,15 @@
-﻿Сборка начата 10.04.2016 19:10:51.
+﻿Сборка начата 12.04.2016 15:28:18.
      1>Проект "C:\Users\Максимка\Work\mp2-lab4-polinom\sln\vc9\WinForm\WinForm.vcxproj" в узле 2 (целевые объекты Build).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Максимка\Work\mp2-lab4-polinom\sln\vc9\Debug" /I../../../gtest /I../../../include /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib MyForm.cpp
-         MyForm.cpp
-     1>c:\users\максимка\work\mp2-lab4-polinom\sln\vc9\winform\MyForm.h(496): warning C4101: error: неиспользованная локальная переменная
-     1>c:\users\максимка\work\mp2-lab4-polinom\sln\vc9\winform\MyForm.h(531): warning C4101: error: неиспользованная локальная переменная
-     1>c:\users\максимка\work\mp2-lab4-polinom\sln\vc9\winform\MyForm.h(572): warning C4101: error: неиспользованная локальная переменная
-       Link:
+     1>Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Максимка\Work\mp2-lab4-polinom\sln\vc9\Debug\WinForm.exe" /INCREMENTAL /NOLOGO Shell32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /ASSEMBLYRESOURCE:Debug\WinForm.MyForm.resources /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Максимка\Work\mp2-lab4-polinom\sln\vc9\Debug\WinForm.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"Main" /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\MyForm.obj
          "Debug\.NETFramework,Version=v4.5.2.AssemblyAttributes.obj"
          "C:\Users\Максимка\Work\mp2-lab4-polinom\sln\vc9\Debug\polinom.lib"
          "C:\Users\Максимка\Work\mp2-lab4-polinom\sln\vc9\Debug\gtest.lib"
      1>polinom.lib(polinom.obj) : warning LNK4075: эх єўшЄ√трхЄё  "/EDITANDCONTINUE" шч-чр ёяхЎшЇшърЎшш "/OPT:LBR"
+     1>.NETFramework,Version=v4.5.2.AssemblyAttributes.obj : warning LNK4099: "vc120.pdb" PDB эх эрщфхэ ё ".NETFramework,Version=v4.5.2.AssemblyAttributes.obj" шыш эр "C:\Users\╠ръёшьър\Work\mp2-lab4-polinom\sln\vc9\Debug\vc120.pdb"; ъюьяюэютър юс·хъЄр т√яюыэ хЄё  ъръ яЁш юЄёєЄёЄтшш юЄырфюўэ√ї фрээ√ї
          WinForm.vcxproj -> C:\Users\Максимка\Work\mp2-lab4-polinom\sln\vc9\Debug\WinForm.exe
      1>Сборка проекта "C:\Users\Максимка\Work\mp2-lab4-polinom\sln\vc9\WinForm\WinForm.vcxproj" завершена (целевые объекты Build).
 
 Сборка успешно завершена.
 
-Затраченное время: 00:00:21.12
+Затраченное время: 00:00:04.50

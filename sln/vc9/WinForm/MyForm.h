@@ -459,104 +459,104 @@ namespace WinForm {
 		Polinom *pol2;
 	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e)
 	{
-		
+
 		pol1 = new Polinom;
 		pol2 = new Polinom;
-		
+
 	}
 
 	private: System::Void label4_Click(System::Object^  sender, System::EventArgs^  e)
 	{
 	}
-			
-			 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e)
-			 {
-				 try
-				 {
-					 double kof = Convert::ToDouble(textBox1->Text);
-					 int x = Convert::ToInt32(textBox2->Text);
-					 int y = Convert::ToInt32(textBox3->Text);
-					 int z = Convert::ToInt32(textBox4->Text);
-					 if (x < 0 || y < 0 || z < 0)
-					 {
-						 throw "Отрицательная степень не допустима! ";
-					 }
-					 if (x > 9 || y > 9 || z > 9)
-					 {
-						 throw "Слишком большая степень не допустима! ";
-					 }
-					 int N = x * 100 + y * 10 + z;
-					 pol1->AddElem (kof, N);
-					 string str;
-					 stringstream s;
-					 s << (*pol1);
-					 getline(s, str);
-					 textBox5->Text = gcnew String(str.c_str());
-				 }
-				 catch (const char* error)
-				 {
-					 textBox5->Text = "Некоректная степень не допустима!";
-				 }
-			 }
 
-			 private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e)
-			 {
-				 textBox5->Text = "";
-				 pol1 = new Polinom;
-			 }
-			  private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e)
-			 {
-				 try
-				 {
-				 double koef = Convert::ToDouble(textBox10->Text);
-				 int x = Convert::ToInt32(textBox9->Text);
-				 int y = Convert::ToInt32(textBox8->Text);
-				 int z = Convert::ToInt32(textBox7->Text);
-				 if (x < 0 || y < 0 || z < 0)
-				 {
-					  throw "Отрицательная степень не допустима! ";
-				 }
-				 if (x > 9 || y > 9 || z > 9)
-				 {
-					 throw "Слишком большая степень не допустима! ";
-				 }
-				 int N = x * 100 + y * 10 + z;
-				 pol2->AddElem(koef, N);
-				 string str;
-				 stringstream c;
-				 c << (*pol2);
-				 getline(c, str);
-				 textBox6->Text = gcnew String(str.c_str());
-				 }
-				 catch (const char* error)
-				 {
-				 textBox6->Text = "Некоректная степень не допустима!";
-				 }
-			 }
+	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e)
+	{
+		try
+		{
+			double kof = Convert::ToDouble(textBox1->Text);
+			int x = Convert::ToInt32(textBox2->Text);
+			int y = Convert::ToInt32(textBox3->Text);
+			int z = Convert::ToInt32(textBox4->Text);
+			if (x < 0 || y < 0 || z < 0)
+			{
+				throw "Отрицательная степень не допустима! ";
+			}
+			if (x > 9 || y > 9 || z > 9)
+			{
+				throw "Слишком большая степень не допустима! ";
+			}
+			int N = x * 100 + y * 10 + z;
+			pol1->AddElem(kof, N);
+			string str;
+			stringstream s;
+			s << (*pol1);
+			getline(s, str);
+			textBox5->Text = gcnew String(str.c_str());
+		}
+		catch (const char* error)
+		{
+			textBox5->Text = "Некоректная степень не допустима!";
+		}
+	}
 
-			 private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e)
-			 {
-				 textBox6->Text = "";
-				 pol1 = new Polinom;
-			 }
-			 private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e)
-			 {
-				 Polinom res = (*pol1) + (*pol2);
-				 string str;
-				 stringstream c;
-				 c << res;
-				 getline(c, str);
-				 textBox11->Text = gcnew String(str.c_str());
-			 }
-			 private: System::Void button6_Click(System::Object^  sender, System::EventArgs^  e)
-			 {
-				 Polinom res = (*pol1) - (*pol2);
-				 string str;
-				 stringstream c;
-				 c << res;
-				 getline(c, str);
-				 textBox11->Text = gcnew String(str.c_str());
-			 }
+	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e)
+	{
+		textBox5->Text = "";
+		pol1 = new Polinom;
+	}
+	private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e)
+	{
+		try
+		{
+			double koef = Convert::ToDouble(textBox10->Text);
+			int x = Convert::ToInt32(textBox9->Text);
+			int y = Convert::ToInt32(textBox8->Text);
+			int z = Convert::ToInt32(textBox7->Text);
+			if (x < 0 || y < 0 || z < 0)
+			{
+				throw "Отрицательная степень не допустима! ";
+			}
+			if (x > 9 || y > 9 || z > 9)
+			{
+				throw "Слишком большая степень не допустима! ";
+			}
+			int N = x * 100 + y * 10 + z;
+			pol2->AddElem(koef, N);
+			string str;
+			stringstream c;
+			c << (*pol2);
+			getline(c, str);
+			textBox6->Text = gcnew String(str.c_str());
+		}
+		catch (const char* error)
+		{
+			textBox6->Text = "Некоректная степень не допустима!";
+		}
+	}
+
+	private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e)
+	{
+		textBox6->Text = "";
+		pol1 = new Polinom;
+	}
+	private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e)
+	{
+		Polinom res = (*pol1) + (*pol2);
+		string str;
+		stringstream c;
+		c << res;
+		getline(c, str);
+		textBox11->Text = gcnew String(str.c_str());
+	}
+	private: System::Void button6_Click(System::Object^  sender, System::EventArgs^  e)
+	{
+		Polinom res = (*pol1) - (*pol2);
+		string str;
+		stringstream c;
+		c << res;
+		getline(c, str);
+		textBox11->Text = gcnew String(str.c_str());
+	}
 	private: System::Void button7_Click(System::Object^  sender, System::EventArgs^  e)
 	{
 		try
@@ -576,9 +576,9 @@ namespace WinForm {
 	}
 	private: System::Void button8_Click(System::Object^  sender, System::EventArgs^  e)
 	{
-		
-		system("test.bat");
 		/*
+		system("test.bat");
+		*/
 		STARTUPINFO si;
 		PROCESS_INFORMATION pi;
 		ZeroMemory(&si, sizeof(si));
@@ -595,9 +595,9 @@ namespace WinForm {
 		WaitForSingleObject(pi.hProcess, INFINITE);
 		CloseHandle(pi.hProcess);
 		CloseHandle(pi.hThread);
-	*/
+		
 	}
-    private: System::Void button9_Click(System::Object^  sender, System::EventArgs^  e)
+	private: System::Void button9_Click(System::Object^  sender, System::EventArgs^  e)
 	{
 		system("Otchet.docx");
 	}
@@ -605,7 +605,7 @@ namespace WinForm {
 	{
 		system("sample.exe");
 	}
-    private: System::Void textBox1_TextChanged(System::Object^  sender, System::EventArgs^  e){}
+	private: System::Void textBox1_TextChanged(System::Object^  sender, System::EventArgs^  e){}
 	private: System::Void textBox2_TextChanged(System::Object^  sender, System::EventArgs^  e){}
 	private: System::Void textBox3_TextChanged(System::Object^  sender, System::EventArgs^  e){}
 	private: System::Void textBox4_TextChanged(System::Object^  sender, System::EventArgs^  e){}
@@ -614,10 +614,9 @@ namespace WinForm {
 	private: System::Void textBox7_TextChanged(System::Object^  sender, System::EventArgs^  e){}
 	private: System::Void textBox8_TextChanged(System::Object^  sender, System::EventArgs^  e){}
 	private: System::Void textBox9_TextChanged(System::Object^  sender, System::EventArgs^  e){}
-    private: System::Void textBox10_TextChanged(System::Object^  sender, System::EventArgs^  e){}
+	private: System::Void textBox10_TextChanged(System::Object^  sender, System::EventArgs^  e){}
 	private: System::Void textBox11_TextChanged(System::Object^  sender, System::EventArgs^  e){}
-	
-			
-		 };
-		 }
 
+
+	};
+}
